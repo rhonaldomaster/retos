@@ -1,0 +1,49 @@
+body {
+  color: #4A4A4A;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+h1,h2 {
+  margin: 0;
+}
+label {
+  font-weight: 400;
+}
+.text-center {
+  text-align: center;
+}
+.wrapper {
+  margin: auto;
+  max-width: 1200px;
+}
+.contact {
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  margin: 20px auto;
+  display: flex;
+  padding: 4px;
+}
+.contact-image {
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+  flex-direction: column;
+  padding: 30px 47px;
+}
+.contact-body {
+  flex-direction: column;
+  padding: 4px;
+  width: 300px;
+}
+@media screen and (max-width:480px) {
+  .contact-image {
+    padding: 0 47px;
+    max-height: 94px;
+  }
+}
