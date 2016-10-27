@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #4A4A4A;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 1200px;
+}
+.list-unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.list--inline li {
+  display: inline;
+}
+
+.like-hover {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 225px;
+}
+.btn--like {
+  position: relative;
+}
+.btn--like:hover .like-hover {
+  display: block;
+}
+.like-icons {
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px #4A4A4A;
+  display: inline-block;
+  padding: 4px;
+}
+.like-icons li {
+  display: inline;
+}
+.like-icon img {
+  cursor: pointer;
+  display: inline;
+  max-height: 32px;
+  max-width: 32px;
+  transition: 0.5s ease all;
+  vertical-align: middle;
+}
+.like-icon img:hover {
+  transform: scale(1.1,1.1);
+}
