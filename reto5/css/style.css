@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EEEEEE;
+  color: #444444;
+  font-family: Helvetica,sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background-color: #3F51B5;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14);
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 16px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: normal;
+  margin: 0;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 9px 1px rgba(0, 0, 0, 0.12);
+  margin: 16px;
+  padding: 16px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.week-weather {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.day-wheater {
+  flex: 1;
+  text-align: center;
+}
+
+.day-wheater img{
+  margin: auto;
+  max-width: 32px;
+}
+
+.day-temperature {
+  margin: 5px 0;
+}
+
+.temperature {
+  display: block;
+  margin: 4px 0;
+}
+
+.temperature-min {
+  color: #888888;
+}
+
+.day-selector {
+  margin-top: 10px;
+}
+
+.day-selector > li {
+  list-style-type: none;
+  margin: 0;
+}
