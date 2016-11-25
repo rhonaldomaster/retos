@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Reto 1</title>
+  </head>
+  <body>
+    <code>function tarea(a){
+  var respuesta = "Define un array valido";
+  if(a.lenght > 0){
+    var arraySorted = a.sort();
+    respuesta = arraySorted[0].split('').join('*');
+  }
+  return respuesta;
+}
+var array = ['ffff','abc','Abc','dsc','kaaa'];
+var resp = tarea(array);
+console.log(resp);</code>
+  </body>
+</html>

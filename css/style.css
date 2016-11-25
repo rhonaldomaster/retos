@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #444444;
+  font-family: Helvetica,sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: auto;
+  max-width: 1440px;
+  padding: 15px;
+}
+
+.slide-container {
+  position: relative;
+}
+
+.slider {
+  overflow: hidden;
+  max-width: 1150px;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+.slide-control {
+  position: absolute;
+  top: 50%;
+}
+
+.slide-control--left {
+  left: 0;
+}
+
+.slide-control--right {
+  right: 0;
+}
+
+.slides {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slide {
+  display: inline-block;
+  width: 250px;
+}
