@@ -1,0 +1,46 @@
+body  {
+  background-color: #000;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/22/Animated_fire_by_nevit.gif);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0;
+  color: #FCFCFC;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  text-shadow: 0 0 4px #000;
+  transition: 0.5s ease all;
+}
+.hide {
+  display: none;
+}
+.errors {
+  color: #C9213A;
+}
+.push--bottom {
+  margin-bottom: 10px;
+}
+.text-center {
+  text-align: center;
+}
+img {
+  max-width: 100%;
+}
+input {
+  border-radius: 4px;
+  border: 0;
+  box-shadow: 0 0 0 1px #CDCDCD;
+  box-sizing: border-box;
+  outline: none;
+  padding: 4px 10px;
+}
+input[type="email"], input[type="password"] {
+  width: 100%;
+}
+.login-div {
+  margin: auto;
+  max-width: 300px;
+}
+.user-data {
+  color: #FFF;
+  padding: 150px 0;
+}
