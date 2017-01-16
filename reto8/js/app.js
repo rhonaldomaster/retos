@@ -15,21 +15,15 @@ var app = (function () {
       verifyIfIsLoggedIn();
     },300);
 
-    document.addEventListener('submit', handleEvents);
-    document.addEventListener('click', handleEvents);
+    document.addEventListener('submit', handleSubmit);
+    document.addEventListener('click', handleClicks);
   };
 
-  var handleEvents = function (ev) {
+  var handleClicks = function (ev) {
     var element = ev.target;
-    if ((element.className).indexOf('js-login-form') > -1) {
-      login(ev);
-    }
-    else if ((element.className).indexOf('js-logout') > -1) {
+    if ((element.className).indexOf('js-logout') > -1) {
       ev.preventDefault();
       logout();
-    }
-    else if ((element.className).indexOf('js-register-walk') > -1) {
-      insertItem(ev);
     }
     else if ((element.className).indexOf('js-open-tab') > -1) {
       openTab(ev);
@@ -39,6 +33,16 @@ var app = (function () {
     }
     else if ((element.className).indexOf('js-modify-log') > -1) {
       showUpdateForm(ev);
+    }
+  };
+
+  var handleSubmit = function (ev) {
+    var element = ev.target;
+    if ((element.className).indexOf('js-login-form') > -1) {
+      login(ev);
+    }
+    else if ((element.className).indexOf('js-register-walk') > -1) {
+      insertItem(ev);
     }
     else if ((element.className).indexOf('js-update-form') > -1) {
       updateItem(ev);
