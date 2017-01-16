@@ -541,17 +541,9 @@ th, td {
   padding: 40px 0;
 }
 
-.user-login {
-  display: none;
-}
-
 .user-login input[type="email"], .user-login input[type="password"] {
   border-radius: 4px;
   padding: 6px 12px;
-}
-
-.user-data {
-  display: none;
 }
 
 .tabs-header {
