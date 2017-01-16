@@ -1,0 +1,488 @@
+/**
+ * Table of contents
+ * #General Variables
+ * #Sass Mixins
+ * #Basic Styles
+ * #Helper classes
+ * #Links and Buttons
+ * #Lists
+ * #Forms
+ * #Typography
+ * #Links and Buttons
+ * #Tables
+ * #Site Header
+ * #Site Nav and Dropdowns
+ * #Site content
+ * #Site Footer
+**/
+
+/*------------------------------------
+    #General Variables
+------------------------------------*/
+$colorPrimary: #9E5CCA;
+$colorSecondary: #7965CD;
+$colorTerciary: #DC5CAC;
+$siteWidth: 1260px;
+$gutter: 10px;
+$colorLink: $colorPrimary;
+$colorLinkHover: darken($colorPrimary, 10%);
+$colorBorder: #FCFCFC;
+$bodyBackground: #ECECEC;
+$white: #FFFFFF;
+
+/*------------------------------------
+    #Sass Mixins
+------------------------------------*/
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-portait-only {
+  @media (min-width: 600px) and (max-width: 899px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-tablet-landscape-only {
+  @media (min-width: 900px) and (max-width: 1199px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-desktop-only {
+  @media (min-width: 1200px) and (max-width: 1799px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+/*------------------------------------
+    #Basic Styles
+------------------------------------*/
+* { box-sizing: border-box; }
+body {
+  background-color: $bodyBackground;
+  color: #4A4A4A;
+  font-family: "Lato",Helvetica,sans-serif;
+  font-size: 16px;
+}
+a {
+  background: transparent;
+  color: $colorLink;
+  text-decoration: underline;
+}
+a:hover, a:focus {
+  color: $colorLinkHover;
+}
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: $siteWidth;
+  padding: 0 10px;
+}
+img, video, canvas {
+  max-width: 100%;
+}
+
+/*------------------------------------
+    #Helper classes
+------------------------------------*/
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+.clearfix {
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  *zoom: 1;
+}
+.relative { position: relative ; }
+.absolute { position: absolute ; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.sr-only { display: none; }
+.display-block { display: block; }
+.hidden { display: none; }
+
+.flush { margin: 0 !important; }
+.flush--bottom { margin-bottom: 0 !important; }
+.flush--left { margin-left: 0 !important; }
+.flush--right { margin-right: 0 !important; }
+.flush--top { margin-top: 0 !important; }
+.flush--ends { margin-top: 0 !important; margin-bottom: 0 !important; }
+.flush--sides { margin-left: 0 !important; margin-right: 0 !important; }
+
+.hard { padding: 0 !important; }
+.hard--bottom { padding-bottom: 0 !important; }
+.hard--left { padding-left: 0 !important; }
+.hard--right { padding-right: 0 !important; }
+.hard--top { padding-top: 0 !important; }
+.hard--ends { padding-top: 0 !important; padding-bottom: 0 !important; }
+.hard--sides { padding-left: 0 !important; padding-right: 0 !important; }
+
+.push--top { margin-top: $gutter !important; }
+.push--bottom { margin-bottom: $gutter !important; }
+.push--left { margin-left: $gutter !important; }
+.push--right { margin-right: $gutter !important; }
+.push--sides { margin-left: $gutter !important; margin-right: $gutter !important; }
+.push--ends { margin-bottom: $gutter !important; margin-top: $gutter !important;}
+.push-adjust--left{ margin-left: 1px !important; }
+.push-adjust--right{ margin-right: 1px !important; }
+
+.soft { padding: $gutter !important; }
+.soft--top { padding-top: $gutter !important; }
+.soft--bottom { padding-bottom: $gutter !important; }
+.soft--left { padding-left: $gutter !important; }
+.soft--right { padding-right: $gutter !important; }
+.soft--sides { padding-left: $gutter !important; padding-right: $gutter !important; }
+.soft--ends { padding-bottom: $gutter !important; padding-top: $gutter !important; }
+
+.text--primary { color: $colorPrimary; }
+.text--secondary { color: $colorSecondary; }
+.text--terciary { color: $colorTerciary; }
+.text--white { color: $white; }
+
+.full-width { width: 100%; }
+
+.error {
+  color: $colorTerciary;
+}
+
+/*------------------------------------
+    #Lists
+------------------------------------*/
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-inline {
+  li {
+    display: inline-block;
+    padding-top: 2px;
+  }
+}
+
+/*------------------------------------
+    #Forms
+------------------------------------*/
+button,
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+input[type="file"],
+input[type="number"],
+input[type="tel"],
+input[type="submit"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input {
+  display: inline-block;
+  width: auto;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+input[type="file"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+  border: 1px solid $colorBorder;
+
+  &:focus {
+    border: 1px solid darken($colorBorder, 10%);
+  }
+
+  &[disabled],
+  &.disabled {
+    cursor: default;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+/*------------------------------------
+    #Typography
+------------------------------------*/
+h1, .alpha {
+  font-size: 35px;
+  margin: 0;
+}
+h2, .beta {
+  font-size: 30px;
+  margin: 0;
+}
+h3, .gamma {
+  font-size: 24px;
+  margin: 0;
+}
+h4, .delta {
+  font-size: 18px;
+  margin: 0;
+}
+h5, .epsilon {
+  font-size: 14px;
+  margin: 0;
+}
+h6, .zeta {
+  font-size: 12px;
+  margin: 0;
+}
+
+/*------------------------------------
+    #Links and Buttons
+------------------------------------*/
+.button {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+  outline: none;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &--small {
+    font-size: 0.75em;
+    padding: 4px 5px;
+  }
+  &--large {
+    padding: 10px 26px;
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+  &--full {
+    width: 100%;
+  }
+  &--primary {
+    background-color: $colorPrimary;
+    color: $white;
+  }
+  &--primary:hover {
+    background-color: darken($colorPrimary, 10%);
+    box-shadow: 0 0 0 1px darken($colorPrimary, 5%);
+  }
+  &--secondary {
+    background-color: $colorSecondary;
+    color: $white;
+  }
+  &--secondary:hover {
+    background-color: darken($colorSecondary, 10%);
+    box-shadow: 0 0 0 1px darken($colorSecondary, 5%);
+  }
+  &--terciary {
+    background-color: $colorTerciary;
+    color: $white;
+  }
+  &--terciary:hover {
+    background-color: darken($colorTerciary, 10%);
+    box-shadow: 0 0 0 1px darken($colorTerciary, 5%);
+  }
+}
+
+.text-link {
+  background: none;
+  border: 0 none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------------
+    #Tables
+------------------------------------*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table.full {
+  width: 100%;
+  margin-bottom: $gutter;
+}
+th {
+  font-weight: bold;
+}
+th, td {
+  text-align: left;
+  padding: $gutter/2;
+  border: 1px solid $colorBorder;
+}
+
+.table {
+  &--without-borders {
+    border: 0;
+    th, td {
+      border: 0;
+    }
+  }
+}
+
+/*------------------------------------
+    #Site Header
+------------------------------------*/
+.site-header {
+  background-color: $colorPrimary;
+  color: $white;
+  padding-bottom: 5px;
+
+  > .grid__item {
+    vertical-align: middle;
+  }
+  a {
+    color: $white;
+  }
+}
+.site-logo {
+  span {
+    vertical-align: middle;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+/*------------------------------------
+    #Site Nav and Dropdowns
+------------------------------------*/
+.main-nav {
+  li {
+    margin: 0 2px;
+    padding-top: 0;
+  }
+}
+.seconday-nav {
+  li {
+    margin: 0 2px;
+    padding-top: 4px;
+  }
+}
+.register-link {
+  text-decoration: none;
+}
+
+/*------------------------------------
+    #Site content
+------------------------------------*/
+.section {
+  padding: 40px 0;
+}
+
+.user-login {
+  display: none;
+  input[type="email"], input[type="password"]{
+    border-radius: 4px;
+    padding: 6px 12px;
+  }
+}
+.user-data {
+  display: none;
+}
+
+.tabs-header {
+  border: 1px solid $colorPrimary;
+  border-radius: 4px 4px 0 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  li {
+    float: left;
+  }
+  li a {
+    background-color: $white;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  li a:focus, .active {
+    color: $white;
+    background-color: $colorPrimary;
+  }
+}
+
+.tab {
+  border: 1px solid $colorPrimary;
+  border-radius: 0 0 4px 4px;
+  border-top: none;
+  padding: 5px 10px;
+}
+.walking-history {
+  @include for-phone-only {
+    padding: 5px;
+
+    .button {
+      padding: 4px 1px;
+    }
+  }
+}
+.register-walk {
+  input {
+    border-radius: 4px;
+    padding: 4px;
+  }
+}
+.update-log {
+  background-color: $bodyBackground;
+  border-radius: 4px;
+  margin: auto;
+  max-width: 320px;
+  padding: 20px 4px 4px 4px;
+
+  input {
+    border-radius: 4px;
+    padding: 4px;
+  }
+}
+/*------------------------------------
+    #Site Footer
+------------------------------------*/
+.site-footer {
+  background-color: $colorSecondary;
+  color: $white;
+  padding: 10px 0;
+
+  a {
+    color: $white;
+  }
+}
+
+/*------------------------------------
+    #Plugin customizations
+------------------------------------*/
+.Zebra_DatePicker_Icon_Inside_Right {
+  top: 5px !important;
+}
