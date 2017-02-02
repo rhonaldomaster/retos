@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+    <title>Reto 9</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="text-center push--bottom">I'm walking dead</h1>
+      <div class="js-login-div user-login text-center">
+        <h2 class="delta push--bottom">Insert your data below</h2>
+        <form class="js-login-form" action="#" method="post">
+          <div class="push--bottom">
+            <input type="email" name="email" value="" placeholder="Your email">
+          </div>
+          <div class="push--bottom">
+            <input type="password" name="password" value="" placeholder="Password here">
+          </div>
+          <div class="push--bottom text-center">
+            <input type="submit" name="submit" class="button button--primary" value="Enter">
+          </div>
+        </form>
+      </div>
+      <div class="js-logged-user user-data">
+        <span>Welcome </span><span class="js-name"></span>
+        <a href="#" class="js-logout">Sign out</a>
+        <nav class="push--top">
+          <ul class="tabs-header js-tabs-header">
+            <li><a href="#" class="js-open-tab" data-target="#tab1">Register your walk</a></li>
+            <li><a href="#" class="js-open-tab" data-target="#tab2">Walking history</a></li>
+          </ul>
+        </nav>
+        <div class="tabs">
+          <div id="tab1" class="tab js-tab register-walk">
+            <form class="clear js-register-walk" action="" method="post">
+              <div class="push--bottom">
+                <span>Date</span>
+              </div>
+              <div class="push--bottom">
+                <input type="text" name="date" class="js-datepicker" value="">
+              </div>
+              <div class="push--bottom">
+                <span>Distance (in kilometers)</span>
+              </div>
+              <div class="push--bottom">
+                <input type="number" name="distance" value="0">
+              </div>
+              <div class="push--bottom">
+                <button type="submit" name="button" class="button button--primary">Register</button>
+              </div>
+            </form>
+            <div class="js-registry-msg"></div>
+          </div>
+          <div id="tab2" class="tab js-tab walking-history">
+            <div class="graph-container push--bottom">
+              <svg viewBox="0 0 320 120" preserveAspectRatio="xMinYMin meet">
+                <g>
+                  <rect x="0" y="0" width="320" height="120" fill="#FFF"/>
+                  <line x1="0" y1="120" x2="0" y2="0" stroke="black"/>
+                  <line x1="0" y1="120" x2="320" y2="120" stroke="black"/>
+                  <text x="10" y="20" font-size="10" fill="gray">Kilometers</text>
+                  <text x="270" y="115" font-size="10" fill="gray">Days</text>
+                </g>
+                <g class="js-graph"></g>
+              </svg>
+            </div>
+            <div class="js-walking-history"></div>
+            <div class="js-log-msg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="js-error-msg error text-center"></div>
+      <div class="js-update-log update-log relative mfp-hide">
+        <form class="js-update-form" action="" method="post">
+          <input type="hidden" name="id" value="" class="js-log-id">
+          <div class="push--bottom">
+            <span>Date</span>
+          </div>
+          <div class="push--bottom">
+            <input type="text" name="date" value="" class="js-log-date">
+          </div>
+          <div class="push--bottom">
+            <span>Distance (in kilometers)</span>
+          </div>
+          <div class="push--bottom">
+            <input type="number" name="distance" value="0" class="js-log-distance">
+          </div>
+          <div class="push--bottom">
+            <button type="submit" name="button" class="button button--primary">Update</button>
+          </div>
+        </form>
+        <div class="js-update-msg"></div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
