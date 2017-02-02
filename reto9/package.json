@@ -1,0 +1,30 @@
+{
+  "name": "reto8",
+  "version": "0.1.0",
+  "description": "App con firebase",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "rhonaldomaster",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhonaldomaster/tufiesta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rhonaldomaster/tufiesta/issues"
+  },
+  "homepage": "https://github.com/rhonaldomaster/tufiesta#readme",
+  "dependencies": {}
+}
